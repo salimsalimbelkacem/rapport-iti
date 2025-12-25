@@ -14,7 +14,7 @@
   ]
 
   set v(weak: true)
-  image("algiers.png", width: 8em) + v(3em)
+  image("./img/algiers.png", width: 8em) + v(3em)
   if spec != none [*Specialty:* #spec #parbreak() #v(2.5em)]
   if mod != none { text(1.75em)[*Module: #mod* #parbreak() #v(1.75em)] }
   if prof != none [*Professor:*\ #prof #parbreak() #v(2.75em)]
@@ -98,9 +98,15 @@
   show: heading-styles
   show: latex-lookalike.style-outline
   outline(title: [Table des matières])
-  // outline(target: figure, title: [Table des figures])
+  outline(target: figure, title: [Table des figures])
  
   counter(page).update(0)
-  set page(numbering: "1")
+  set page(
+    numbering: "1",
+    // header: text(spacing: 0)[bobo]+line(length: 100%)
+)
+  // set table(
+  //
+  // )
   doc
 }
