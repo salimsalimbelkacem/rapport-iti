@@ -14,7 +14,7 @@
   ]
 
   set v(weak: true)
-  image("./img/algiers.png", width: 8em) + v(3em)
+  image("/img/algiers.png", width: 8em) + v(3em)
   if spec != none [*Specialty:* #spec #parbreak() #v(2.5em)]
   if mod != none { text(1.75em)[*Module: #mod* #parbreak() #v(1.75em)] }
   if prof != none [*Professor:*\ #prof #parbreak() #v(2.75em)]
