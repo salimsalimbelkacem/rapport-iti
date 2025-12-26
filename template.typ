@@ -6,18 +6,18 @@
   set par(leading: .9em)
   
   [
-    DEMOCRATIC AND POPULAR ALGERIAN REPUBLIC\
-    Ministry of Higher Education and Scientific Research\
-    *University of Algiers 1 -- Ben Youcef BenKheda\
+    REPUBLIQUE ALGERIENNE DEMOCRATIQUE ET POPULAIRE\
+    Ministère de l'enseignement supérieur et de la recherche scientifique\
+    *Université d'Alger 1 -- Ben Youcef BenKheda\
     #fac\
-    #dept Department*
+    Department #dept*
   ]
 
   set v(weak: true)
   image("/img/algiers.png", width: 8em) + v(3em)
-  if spec != none [*Specialty:* #spec #parbreak() #v(2.5em)]
-  if mod != none { text(1.75em)[*Module: #mod* #parbreak() #v(1.75em)] }
-  if prof != none [*Professor:*\ #prof #parbreak() #v(2.75em)]
+  if spec != none [*Specialté:* #spec #parbreak() #v(2.5em)]
+  if mod != none { text(1.5em)[*Module: #mod* #parbreak() #v(1.75em)] }
+  if prof != none [*Professeur:*\ #prof #parbreak() #v(2.75em)]
   if title != none {
     text(2em)[*Theme*] + v(1.75em)
     line(length: 100%)
@@ -31,7 +31,7 @@
     set align(left)
     set list(marker: [--])
     
-    [Authors:]
+    [Auteurs:]
     let halves = author.chunks(calc.ceil(author.len() / 2))
     grid(columns: (1fr, 1fr), ..halves.map(h => list(..h)))
   }
@@ -74,8 +74,8 @@
 
 #let project(
   doc,
-  faculty: [Faculty of Science],
-  dept: [Computer Science],
+  faculty: [Faculté de Science],
+  dept: [d'Informatique],
   specialty: none,
   module: none,
   professor: none,

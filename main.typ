@@ -1,10 +1,11 @@
 #import "template.typ": project
 
 #show: project.with(
-  specialty: [Intelligent information systems engineering (ISII)],
-  module: [Introduction to image processing],
+  specialty: [Ingénierie des Systèmes Informatiques Intelligents (ISII)],
+  module: [Introduction au Traitement d'Images],
   professor: [Mme. BELATTAR],
-  title: [Analysis and optimization of machine learning techniques for regression and classification],
+  title: [Génération de descriptions d’images avec des modèles
+d’apprentissage automatique],
   year: "2024/2025",
   author: (
     "BENHOUACHE Ibrahim

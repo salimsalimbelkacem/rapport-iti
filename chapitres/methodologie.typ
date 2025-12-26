@@ -65,6 +65,10 @@ Module de génération de langage naturel (NLG) basé sur des templates.
 
 Une heuristique déduit le *contexte environnemental* (ex: "sky", "room") à partir des objets détectés pour construire une phrase syntaxiquement correcte : *"This image contains [objets] in a [contexte]"*.
 
+#figure(
+    image("/img/resultat.jpg"),
+    caption: [Légende générée]
+)
 
 == Segmentation
 
@@ -107,9 +111,13 @@ Orchestrateur principal du projet. Il charge les données, exécute le pipeline 
 
 Interface utilisateur (GUI) développée avec *CustomTkinter*.
 
-Elle permet le chargement interactif d'images (gestion des encodages Windows), l'inférence en temps réel avec un seuil de probabilité ajustable (15%) pour détecter les classes rares, et la visualisation de la segmentation par K-Means.
+Elle permet:
+- Le chargement interactif d'images,
+- La selection de model (Random Forest, SVM, MLP Classifier, Naive Bayes, LightGBM, Decision Tree),
+- L'analyse d'image et generation de Légende,
+- L'inspection de la segmentation efféctué sur l'image chargé
 
 #figure(
-  image("/img/gui.jpg"),
+  image("/img/gui.png"),
   caption: [interface graphique]
 )

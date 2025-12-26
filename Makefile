@@ -1,11 +1,18 @@
-.PHONY: watch
+.PHONY: watch all clean
 
 TYPST = typst
 CHAPITRES = ./chapitres
 BROWSER = zen-browser
 
-raport.pdf: main.typ $(CHAPITRES)/*
-	$(TYPST) c $<
+MAIN = main.typ
+
+all: rapport.pdf
+
+%.pdf: $(MAIN) $(CHAPITRES)/* clean
+	$(TYPST) c $< $@
 
 watch:
-	$(BROWSER) ./main.pdf && $(TYPST) watch main.typ
+	$(BROWSER) main.pdf && $(TYPST) w $(MAIN)
+
+clean:
+	rm *.pdf

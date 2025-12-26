@@ -13,18 +13,12 @@ _ Ce tableau explique les métriques utilisées pour évaluer nos modèles, conf
     [*Interprétation*],
   ),
 
-[*Accuracy* ],[Classification ],[Est-ce que le modèle a trouvé *tous* les objets de l'image sans aucune erreur ? (Très strict pour du multi-label). ],[Un score bas est normal (< 10%) car il suffit d'oublier un seul objet pour avoir 0. ],
-[*F1-Score\ (Micro)* ],[Classification ],[Moyenne harmonique entre Précision et Rappel. C'est la métrique *la plus importante* ici. ],[Plus c'est haut, mieux le modèle détecte les objets présents. ],
-[*Hamming Loss* ],[Classification ],[Taux d'erreur par étiquette. ],[*Plus c'est bas, mieux c'est.* (Proche de 0 = Parfait). ],
-[*BLEU-4* ],[NLP (Texte) ],[Mesure si la phrase générée contient les mêmes suites de 4 mots que la référence. ],[> 0.30 est un très bon score pour une phrase générée par template. ],
-[*CIDEr* ],[NLP (Texte) ],[Métrique spécifique au *Image Captioning*. Elle donne plus de poids aux mots rares et importants. ],[Le score le plus robuste pour valider la description. ],
+  [*Accuracy* ],[Classification ],[Est-ce que le modèle a trouvé *tous* les objets de l'image sans aucune erreur ? (Très strict pour du multi-label). ],[Un score bas est normal (< 10%) car il suffit d'oublier un seul objet pour avoir 0. ],
+  [*F1-Score\ (Micro)* ],[Classification ],[Moyenne harmonique entre Précision et Rappel. C'est la métrique *la plus importante* ici. ],[Plus c'est haut, mieux le modèle détecte les objets présents. ],
+  [*Hamming Loss* ],[Classification ],[Taux d'erreur par étiquette. ],[*Plus c'est bas, mieux c'est.* (Proche de 0 = Parfait). ],
+  [*BLEU-4* ],[NLP (Texte) ],[Mesure si la phrase générée contient les mêmes suites de 4 mots que la référence. ],[> 0.30 est un très bon score pour une phrase générée par template. ],
+  [*CIDEr* ],[NLP (Texte) ],[Métrique spécifique au *Image Captioning*. Elle donne plus de poids aux mots rares et importants. ],[Le score le plus robuste pour valider la description. ],
 )
-
-== Analyse des Résultats (10k Images)
-
-- Jeu de données : 10 000 images (Fusion Pascal VOC 2007 + 2012).
-- Pipeline : Extraction ORB (500 features)  BoVW (K=500)  PCA (95%).
-- Validation : Cross-Validation  K = 8
 
 == Tableau Synthétique des Performances
 _ Ce tableau classe les modèles du plus performant au moins performant,
