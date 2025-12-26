@@ -1,6 +1,7 @@
 // released under the MIT License, © catte_ 2025
 #import "@preview/latex-lookalike:0.1.4"
 
+
 #let cover(fac, dept, spec, mod, prof, title, author, year) = {
   set align(center)
   set par(leading: .9em)
@@ -85,7 +86,7 @@
 ) = {
   set document(title: title, author: author)
   set par(spacing: 2em, leading: .8em, first-line-indent: (amount: 1.25em, all: true))
-  set text(font: "new computer modern", 12pt)  
+  set text(font: "new computer modern", 12pt, lang: "fr")  
   page(cover(faculty, dept, specialty, module, professor, title, author, year))
 
   set list(indent: 1.5em)
@@ -99,6 +100,12 @@
   show: latex-lookalike.style-outline
   outline(title: [Table des matières])
   outline(target: figure, title: [Table des figures])
+
+  bibliography(
+    "/bib.bib",
+    style: "ieee",
+    full: true,
+  )
  
   counter(page).update(0)
   set page(

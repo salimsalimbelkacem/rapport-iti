@@ -44,23 +44,14 @@ Dictionnaire : K-Means. Pour regrouper les descripteurs similaires.
 Classification : SVM (Support Vector Machine). Réputé pour sa robustesse en haute
 dimension.
 
-== Présentation du Jeu de Données
+== À propos du jeu de données
+Le jeu de données *VOC0712* #cite(<PascalVOC>) est une fusion des ensembles *PASCAL VOC 2007* et *PASCAL VOC 2012*, largement reconnus dans le domaine de la vision par ordinateur pour les tâches de détection et de segmentation d’objets. Il regroupe des images représentant *20 classes d’objets*, comprenant des personnes, des animaux et des véhicules.
 
-Nous avons opté pour le dataset Pascal VOC 2007 (Visual Object Classes).
+=== Utilisation
+Ce jeu de données est couramment utilisé pour la *détection d’objets*, la *segmentation d’objets* ainsi que pour d’autres applications connexes en vision par ordinateur. Il constitue une référence standard pour l’évaluation et la comparaison des performances des modèles, et de nombreux modèles de pointe ont été entraînés à partir de VOC0712.
 
-=== Caractéristiques
+=== Collecte des données
+Les images ont été collectées à partir de diverses sources publiques, notamment des recherches sur le web, Flickr et d’autres dépôts d’images accessibles au public. Les annotations ont été réalisées par des experts du domaine et sont régulièrement mises à jour afin d’assurer leur *exactitude* et leur *qualité*.
 
-Taille : Environ 5 000 images pour l'entraînement et 5 000 pour le test.
-Classes : 20 catégories d'objets réparties en 4 groupes :
-Personne : person
-Animaux : bird, cat, cow, dog, horse, sheep
-Véhicules : aeroplane, bicycle, boat, bus, car, motorbike, train
-Intérieur : bottle, chair, dining table, potted plant, sofa, tv/monitor
-Annotations : Format XML fournissant les boîtes englobantes (bounding boxes) et les
-labels.
-
-=== Pourquoi ce choix ?
-Contrairement à Flickr8k qui contient des phrases complexes et du bruit, Pascal VOC est un
-dataset de classification pure. Cela permet d'entraîner nos modèles classiques plus
-efficacement sur des concepts visuels distincts, évitant la confusion que provoquerait un
-dataset trop généraliste.
+=== Couverture
+Le jeu de données VOC0712 comprend un total de *16 551 images*, dont *11 530 images d’entraînement* et *4 921 images de test*. Il couvre les 20 classes suivantes : avion, vélo, oiseau, bateau, bouteille, bus, voiture, chat, chaise, vache, table à manger, chien, cheval, moto, personne, plante en pot, mouton, canapé, train, télévision / moniteur.
