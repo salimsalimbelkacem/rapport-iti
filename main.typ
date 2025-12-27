@@ -6,7 +6,7 @@
   professor: [Mme. BELATTAR],
   title: [Génération de descriptions d’images avec des modèles
 d’apprentissage automatique],
-  year: "2024/2025",
+  year: "2025/2026",
   author: (
     "BENHOUACHE Ibrahim
     Mohi Eddine",

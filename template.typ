@@ -56,7 +56,7 @@
       width: 100%, height: 2.5em,
       corner(bottom + right, +1, it.body) + if it.numbering != none {
         set text(font: "New Computer Modern Sans")
-        corner(top + left, -1, text(lang: "fr")[Chapitre #counter(heading).display()])
+        corner(top + left, -1, [Chapitre #counter(heading).display()])
       }
     )
   
